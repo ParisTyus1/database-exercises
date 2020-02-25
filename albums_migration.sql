@@ -11,6 +11,7 @@ CREATE TABLE albums (
     total_certified_copies FLOAT NOT NULL,
     refs VARCHAR(4),
     PRIMARY KEY (id),
+    UNIQUE KEY (id),
     CONSTRAINT uc_albums UNIQUE (artist, album_name)
 );
 
