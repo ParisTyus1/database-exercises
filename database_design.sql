@@ -83,9 +83,9 @@ CREATE TABLE IF NOT EXISTS results (
                                        FOREIGN KEY (users_id) REFERENCES users (id),
                                        FOREIGN KEY (quizzes_id) REFERENCES quiz (id)
 );
-SELECT COUNT(*) AS 'Number of students that have taken the quiz' FROM (
-                                                                          SELECT DISTINCT users_id
-                                                                          FROM results
-                                                                                   JOIN quiz AS q ON q.id = results.quizzes_id AND q.id = 5
-                                                                          GROUP BY users_id
-                                                                      )
+SELECT COUNT(*) AS 'Number of students that have taken the quiz' FROM users_id
+
+  FROM results
+           JOIN quiz AS q ON q.id = results.quizzes_id AND q.id = 5
+  GROUP BY users_id
+)
